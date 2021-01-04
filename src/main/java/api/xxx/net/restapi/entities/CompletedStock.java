@@ -15,6 +15,7 @@ import lombok.Data;
 @Table("CompletedStock")
 public class CompletedStock {
     @Id
+    @Column("Id")
     BigDecimal id;
 
     @Column("ItemKey")
