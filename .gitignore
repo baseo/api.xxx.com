@@ -34,3 +34,4 @@ build/
 
 ### Private Settings ###
 application.properties
+keystore/
