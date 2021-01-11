@@ -1,8 +1,5 @@
 package api.xxx.net.restapi.services;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,19 +25,17 @@ public class CRUD_CompletedStock_RestAPIService {
      * @param completedStockList
      */
     @PostMapping
-    public void  createCompletedStocks(@RequestBody List<CompletedStock> completedStockList) {
+    public void  createCompletedStocks(@RequestBody Iterable<CompletedStock> completedStockList) {
         completedStockRepository.saveAll(completedStockList);
     }
 
     /**
      * Reading completed stock list with no limit...
-     * @return List<CompletedStock> by JSON
+     * @return
      */
     @GetMapping
-    public List<CompletedStock> retrieveCompletedStocks() {
-        List<CompletedStock> resultList = new ArrayList<CompletedStock>();
-        completedStockRepository.findAll().forEach(stock -> resultList.add(stock));
-        return resultList;
+    public Iterable<CompletedStock> retrieveCompletedStocks() {
+        return completedStockRepository.findAll();
     }
 
     /**
@@ -48,7 +43,7 @@ public class CRUD_CompletedStock_RestAPIService {
      * @param completedStockList
      */
     @PutMapping
-    public void updateCompletedStock(@RequestBody List<CompletedStock> completedStockList) {
+    public void updateCompletedStock(@RequestBody Iterable<CompletedStock> completedStockList) {
         completedStockRepository.saveAll(completedStockList);
     }
 

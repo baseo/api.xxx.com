@@ -33,7 +33,6 @@ public class RestApiSecurityConfiguration extends WebSecurityConfigurerAdapter{
                     .authenticated()
             .and()
             .httpBasic()
-                .realmName("To access ERP Database")
             .and()
             .csrf()
                 .disable();
