@@ -21,7 +21,7 @@ public class CRUD_CompletedStock_RestAPIService {
     private final CompletedStockRepository completedStockRepository;
 
     /**
-     * Creating completed stock list without conflict. CSRF setting is needed. 
+     * Creating completed stock list without conflict. 
      * @param completedStockList
      */
     @PostMapping

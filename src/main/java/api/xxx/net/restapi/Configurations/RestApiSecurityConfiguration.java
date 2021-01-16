@@ -8,7 +8,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 
-import api.xxx.net.restapi.services.XRXX_UserBasicAuthProviderService;
+import api.xxx.net.restapi.services.UserBasicAuthProviderService;
+
 
 @Configuration
 @EnableWebSecurity
@@ -28,8 +29,6 @@ public class RestApiSecurityConfiguration extends WebSecurityConfigurerAdapter{
          * xss countermeasure
          * csrf optimize
          * OAuth2
-         * form Login setting
-         * Logout setting
          */
         http
             .authorizeRequests()
@@ -47,6 +46,7 @@ public class RestApiSecurityConfiguration extends WebSecurityConfigurerAdapter{
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception{
-        auth.authenticationProvider(new XRXX_UserBasicAuthProviderService());
+        auth.authenticationProvider(new UserBasicAuthProviderService());
     }
+    
 }
