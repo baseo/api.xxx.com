@@ -1,10 +1,11 @@
-package api.xxx.net.restapi.services;
+package api.xxx.net.restapi.configurations;
 
 import java.util.Objects;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -13,9 +14,10 @@ import org.springframework.security.core.AuthenticationException;
 import api.xxx.net.restapi.entities.User;
 import api.xxx.net.restapi.repositries.UserRepository;
 
-public class UserBasicAuthProviderService implements AuthenticationProvider {
+@Configuration
+public class UserBasicAuthConfiguration implements AuthenticationProvider {
 
-    Logger logger = LoggerFactory.getLogger(UserBasicAuthProviderService.class);
+    Logger logger = LoggerFactory.getLogger(UserBasicAuthConfiguration.class);
     
     @Autowired
     private UserRepository userRepository;
@@ -34,6 +36,7 @@ public class UserBasicAuthProviderService implements AuthenticationProvider {
         logger.info("😁:" + inspectedUserAccountId);
         logger.info("🔓:" + inspectedPassword);
 
+        // WHY SPRING SECURITY!! can't wired repository... →@Configuration追加で解消した
         User retrievedUserResult = userRepository.findByEmail(inspectedUserAccountId);
 
         if (Objects.nonNull(retrievedUserResult) 
