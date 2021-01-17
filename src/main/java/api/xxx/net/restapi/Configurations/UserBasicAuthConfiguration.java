@@ -43,6 +43,7 @@ public class UserBasicAuthConfiguration implements AuthenticationProvider {
             && retrievedUserResult.getEmail().equals(inspectedUserAccountId)
             && retrievedUserResult.getPassword().equals(inspectedPassword)
         ){
+            logger.info("Authentication🆗");
             return 
                 new UsernamePasswordAuthenticationToken(
                                                         inspectedUserAccountId, 
@@ -50,6 +51,7 @@ public class UserBasicAuthConfiguration implements AuthenticationProvider {
                                                         authentication.getAuthorities()
                                                         );
         } else {
+            logger.info("Authentication🆖");
             throw new BadCredentialsException("account id or passward is not correct.");
         }
     }
