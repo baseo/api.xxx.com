@@ -33,9 +33,4 @@ public class UserRepositoryTest{
         userRepository.findByEmail(inspectedEmail);
     }
 
-    @Test
-    public void findAllTest() {
-        userRepository.findAll();
-    }
-
 }
