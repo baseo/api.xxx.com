@@ -17,26 +17,27 @@ import lombok.Data;
 public class User {
     @Id
     @Column("Id")
-    BigDecimal id;
+    private BigDecimal id;
 
     @Column("FirstName")
-    String firstName;
+    private String firstName;
 
     @Column("LastName")
-    String lastName;
+    private String lastName;
     
     @Column("Email")
-    String email;
+    private String email;
 
     @Column("Password")
-    String password;
+    private String password;
 
     @Column("CreatedDate")
-    Timestamp createdDate;
+    private Timestamp createdDate;
 
     @Column("ModifiedDate")
-    Timestamp modifiedDate;
+    private Timestamp modifiedDate;
 
     @Column("IsDeleted")
-    String isDeleted;
+    private boolean isDeleted;
+
 }

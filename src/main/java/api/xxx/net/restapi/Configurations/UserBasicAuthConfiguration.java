@@ -36,7 +36,6 @@ public class UserBasicAuthConfiguration implements AuthenticationProvider {
         logger.info("😁:" + inspectedUserAccountId);
         logger.info("🔓:" + inspectedPassword);
 
-        // WHY SPRING SECURITY!! can't wired repository... →@Configuration追加で解消した
         User retrievedUserResult = userRepository.findByEmail(inspectedUserAccountId);
 
         if (Objects.nonNull(retrievedUserResult) 

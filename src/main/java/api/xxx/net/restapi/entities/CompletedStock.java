@@ -16,21 +16,24 @@ import lombok.Data;
 public class CompletedStock {
     @Id
     @Column("Id")
-    BigDecimal id;
+    private BigDecimal id;
 
     @Column("ItemKey")
-    BigDecimal itemKey;
+    private BigDecimal itemKey;
 
     @Column("Quantity")
-    BigDecimal quantity;
+    private BigDecimal quantity;
 
     @Column("Location")
-    String location;
+    private String location;
 
     @Column("CreatedDate")
-    Timestamp createdDate;
+    private Timestamp createdDate;
 
     @Column("ModifiedDate")
-    Timestamp modifiedDate;
+    private Timestamp modifiedDate;
+
+    @Column("IsDeleted")
+    private boolean isDeleted;
 
 }
