@@ -12,7 +12,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import api.xxx.net.restapi.entities.User;
-import api.xxx.net.restapi.repositries.UserRepository;
+import api.xxx.net.restapi.repositories.UserRepository;
 
 @Configuration
 public class UserBasicAuthConfiguration implements AuthenticationProvider {

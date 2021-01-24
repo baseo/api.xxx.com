@@ -8,11 +8,11 @@
 		<version>2.4.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>api.xxx.net</groupId>
+	<groupId>api.xxx.com</groupId>
 	<artifactId>restapi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>restapi</name>
-	<description>Production project for api.xxx.net</description>
+	<description>Production project for api.xxx.com</description>
 
 	<properties>
 		<java.version>14</java.version>

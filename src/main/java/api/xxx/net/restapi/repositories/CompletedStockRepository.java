@@ -1,4 +1,4 @@
-package api.xxx.net.restapi.repositries;
+package api.xxx.net.restapi.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import api.xxx.net.restapi.entities.CompletedStock;
-import api.xxx.net.restapi.repositries.CompletedStockRepository;
+import api.xxx.net.restapi.repositories.CompletedStockRepository;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
