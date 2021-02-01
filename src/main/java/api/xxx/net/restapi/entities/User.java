@@ -37,7 +37,4 @@ public class User {
     @Column("ModifiedDate")
     private Timestamp modifiedDate;
 
-    @Column("IsDeleted")
-    private boolean isDeleted;
-
 }

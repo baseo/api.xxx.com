@@ -1,5 +1,7 @@
 package api.xxx.net.restapi.repositories;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,9 +29,11 @@ public class UserRepositoryTest{
 
         userRepository.save(testUser);
         
-        String inspectedEmail = "test@test.com";
+        String expectedEmail = "test@test.com";
 
-        userRepository.findByEmail(inspectedEmail);
+        User actualUserResult = userRepository.findByEmail(expectedEmail);
+
+        assertEquals(expectedEmail, actualUserResult.getEmail());
     }
 
 }

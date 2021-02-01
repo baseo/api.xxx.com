@@ -33,7 +33,4 @@ public class CompletedStock {
     @Column("ModifiedDate")
     private Timestamp modifiedDate;
 
-    @Column("IsDeleted")
-    private boolean isDeleted;
-
 }
