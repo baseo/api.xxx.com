@@ -1,2 +1,2 @@
 # api.xxx.net
-Uサンミテイマス
+Usanミテイマスネ
